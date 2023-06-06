@@ -29,6 +29,7 @@ namespace AspNetCoreWebApplication
     {
       services.AddRazorPages();
       services.AddControllers();
+      services.AddCors();
 
       //Configure db context with sql database
       services.AddDbContext<AppDbContext>(options => options.UseSqlServer(ConnectionString));
@@ -68,6 +69,7 @@ namespace AspNetCoreWebApplication
       app.UseEndpoints(endpoints =>
       {
         endpoints.MapRazorPages();
+        endpoints.MapControllers();
       });
       AppDbInitializer.Seed(app);
     }

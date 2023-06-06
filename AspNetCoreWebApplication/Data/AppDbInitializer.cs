@@ -19,13 +19,11 @@ namespace AspNetCoreWebApplication
         {
           context.Employees.AddRange(new EmployeeModel()
           {
-            EmployeeId = 0001,
             Email = "Employee1@gmail.com",
             DateOfJoining = DateTime.Today.AddDays(-5),
             EmployeeName = "Employee1"
           }, new EmployeeModel()
           {
-            EmployeeId = 0002,
             Email = "Employee2@gmail.com",
             DateOfJoining = DateTime.Today,
             EmployeeName = "Employee2"
